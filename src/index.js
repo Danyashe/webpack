@@ -33,3 +33,32 @@
 
 
 import './styles/style.css'
+
+import hb from "./templates/qwerty.hbs"
+
+import {base, list, frameworks, libs} from "./data/hbsData"
+
+import task from "./templates/qwertyq.hbs"
+
+import markup from "./templates/markup.hbs"
+
+import markuplast from "./templates/markuplast.hbs"
+
+const array = markuplast(libs)
+
+
+const newArr = markup(frameworks)
+
+// const abs = hb(base)
+// console.log(abs)
+const root = document.querySelector("#root")
+// root.insertAdjacentHTML('beforeend', abs)
+
+// const library = task(list)
+
+// root.insertAdjacentHTML('beforeend', library)
+
+root.insertAdjacentHTML('beforeend', newArr)
+
+root.insertAdjacentHTML('beforeend', array)
+
